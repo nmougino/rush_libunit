@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/07 23:21:20 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/11 19:00:37 by nmougino         ###   ########.fr        #
+#    Updated: 2017/02/11 19:28:25 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC =		clang
 CFLAGS +=	-Wall -Wextra -Werror -Weverything
 
 #	Binary
-NAME =		real_test
+NAME =		real_tests
 
 #	Default rule
 DEFRULE =	all

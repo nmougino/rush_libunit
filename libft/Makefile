@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 16:20:26 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/08 22:07:45 by nmougino         ###   ########.fr        #
+#    Updated: 2017/02/11 19:25:01 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -202,3 +202,10 @@ clean:
 fclean: clean
 	@echo "$(RED)@ Binary deletion$(DEF)"
 	@rm -f $(NAME)
+
+#	unit test
+
+test:
+	@make -C ../framework
+	@make -C ../real_tests
+	@../real_tests/real_tests
