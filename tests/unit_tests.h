@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   unit_tests.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 16:39:18 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 17:08:01 by nmougino         ###   ########.fr       */
+/*   Created: 2017/02/11 16:40:13 by nmougino          #+#    #+#             */
+/*   Updated: 2017/02/11 17:10:35 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
-#include "unit_test.h"
+#ifndef UNIT_TEST_H
+# define UNIT_TEST_H
 
-int ft_strlen_launcher(void)
-{
-	t_unit_test *list;
+int launcher(void);
 
-	list = NULL;
-	ft_printf("FT_STRLEN\n");
-	load_test(&list, "Basic test", &basic_test);
-	load_test(&list, "NULL test", &null_test);
-	load_test(&list, "Empty string", &empty_string);
-	return(launch_tests(list));
-}
+int	wina_test(void);
+int	fail_test(void);
+int	segv_test(void);
+int	buse_test(void);
+
+#endif

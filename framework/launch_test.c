@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 13:12:29 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 14:30:10 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/11 17:10:44 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,41 +50,4 @@ int	launch_test(t_unit_test *list)
 	}
 	display_total(ret);
 	return(ret[0] + ret[1] + ret[2] + ret[3] + ret[4] == ret[0] ? 0 : -1);
-}
-
-int	wina_test(void)
-{
-	return (0);
-}
-
-int	fail_test(void)
-{
-	return (-1);
-}
-
-int	segv_test(void)
-{
-	printf("%s", 2);
-	return (-1);
-}
-
-int	buse_test(void)
-{
-	char *s = "salut";
-
-	s[0] = 3;
-	return (-1);
-}
-
-int main(void)
-{
-	t_unit_test *list;
-
-	list = NULL;
-	load_test(&list, "wina_test", &wina_test);
-	load_test(&list, "fail_test", &fail_test);
-	load_test(&list, "segv_test", &segv_test);
-	load_test(&list, "buse_test", &buse_test);
-	launch_test(list);
-	return (0);
 }
