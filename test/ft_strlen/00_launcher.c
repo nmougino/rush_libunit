@@ -6,14 +6,14 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 16:39:18 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 16:42:30 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/11 16:45:23 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 #include "unit_test.h"
 
-int strlen_launcher(void)
+int ft_strlen_launcher(void)
 {
 	t_unit_test *testlist;
 
