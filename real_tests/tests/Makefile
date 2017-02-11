@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/07 23:21:20 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/11 20:25:05 by nmougino         ###   ########.fr        #
+#    Updated: 2017/02/11 20:43:10 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ libcomp:
 	make all -C ..
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CFLAGS)	$(ADDFLAGS) -c -o $@ $^ -I $(INCDIR)
+	$(CC) $(CFLAGS)	$(ADDFLAGS) -c -o $@ $^ -I . -I $(INCDIR)
 
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
@@ -93,7 +93,7 @@ $(OBJDIR):
 
 $(NAME): $(OBJP)
 	@echo "$(GRA)$(CYA)@ ++ $@ compilation$(DEF)"
-	@$(CC) $(CFLAGS) $(ADDFLAGS) $^ -o $@ -I $(INCDIR) -I . -L ../../framework -lunit -L .. -lft
+	@$(CC) $(CFLAGS) $(ADDFLAGS) $^ -o $@ -I . -I ../includes -L ../../framework -lunit -L .. -lft
 
 #	MrProper's legacy
 clean:
