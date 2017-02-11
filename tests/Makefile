@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/07 23:21:20 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/11 17:40:04 by nmougino         ###   ########.fr        #
+#    Updated: 2017/02/11 19:03:07 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,11 +26,12 @@ INCDIR =	.
 OBJDIR =	objs
 
 #	Liste des sources
-SRC =		00_launcher.c\
-			01_ok_test.c\
-			02_fail_test.c\
-			03_seg_fault_test.c\
-			04_bus_error.c
+SRC =		00_launcher.c \
+			01_ok_test.c \
+			02_fail_test.c \
+			03_seg_fault_test.c \
+			04_bus_error.c \
+			main.c
 
 OBJ =		$(SRC:.c=.o)
 

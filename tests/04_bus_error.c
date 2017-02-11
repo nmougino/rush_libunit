@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 17:14:06 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 17:36:34 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/11 19:02:49 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	buse_test(void)
 {
-	char *s = "salut";
+	static char *s = "salut";
 
 	s[0] = 3;
 	return (-1);
