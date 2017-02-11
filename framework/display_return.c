@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 13:37:50 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 14:28:39 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/11 17:56:36 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,22 @@
 
 int	display_return(int stat, char *name)
 {
-	printf("\t> %s : ", name);
+	ft_printf("     * %s : ", name);
 	if (WIFEXITED(stat))
 	{
-		printf("%s", WEXITSTATUS(stat) ? "KO\n" : "OK\n");
+		ft_printf("%s\n", WEXITSTATUS(stat) ? UNIT_KO : UNIT_OK);
 		return (WEXITSTATUS(stat) ? 1 : 0);
 	}
 	else if (stat == SIGSEGV)
 	{
-		printf("SEGV\n");
+		ft_printf("%s\n", UNIT_SEGV);
 		return (2);
 	}
 	else if (stat == SIGBUS)
 	{
-		printf("BUSE\n");
+		ft_printf("%s\n", UNIT_BUSE);
 		return (3);
 	}
-	else
-	{
-		printf("UNKNOWN (non-supported error)\n");
-		return (4);
-	}
+	ft_printf("%sUNKNOWN (non-supported error)%s\n", "\033[33m", "\033[0m");
+	return (4);
 }
