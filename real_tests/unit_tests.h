@@ -6,12 +6,15 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 16:40:13 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 16:46:54 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/11 19:07:38 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UNIT_TEST_H
 # define UNIT_TEST_H
+
+# include "libunit.h"
+# include "libft.h"
 
 /*
 ** FT_STRLEN

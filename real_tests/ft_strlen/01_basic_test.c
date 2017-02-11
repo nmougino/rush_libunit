@@ -6,12 +6,11 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 16:23:11 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 16:45:31 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/11 19:06:59 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <string.h>
+#include "unit_tests.h"
 
 int	ft_strlen_basic_test(void)
 {

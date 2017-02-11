@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 13:12:29 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 17:55:35 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/11 19:10:39 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ static void	display_total(int *ret)
 		ft_printf("%15s [ %d ]  ", UNIT_BUSE, ret[3]);
 	if (ret[4])
 		ft_printf("UNKNOW [ %d ]", ret[4]);
-	ft_printf("\n\n\tTotal performed test : %d\n\n", ret[0] + ret[1] + ret[2]
-		+ ret[3] + ret[4]);
 }
 
 int	launch_test(t_unit_test *list)
