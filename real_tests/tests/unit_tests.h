@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 16:40:13 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 18:26:08 by ahamouda         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:29:49 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,15 @@ int	ft_strcmp_len_test(void);
 int	ft_strcmp_len_test_two(void);
 int	ft_strcmp_null_test_two(void);
 int	ft_strcmp_null_test_three(void);
+
+/*
+** FT_STRREV
+*/
+
+int	ft_strrev_launcher(void);
+
+int	ft_strrev_basic_test(void);
+int	ft_strrev_null_test(void);
+int	ft_strrev_empty_string(void);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/07 23:21:20 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/12 18:53:45 by ahamouda         ###   ########.fr        #
+#    Updated: 2017/02/12 20:29:10 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,7 @@ DEFRULE =	all
 SRCDIR =	.
 INCDIR =	../includes
 OBJDIR =	objs
-DETDIR =	ft_strlen
-DETDIR +=	ft_strcmp
+DETDIR =	ft_strlen ft_strcmp ft_strrev
 
 #	Liste des sources
 SRC =		ft_strlen/00_launcher.c \
@@ -41,6 +40,10 @@ SRC =		ft_strlen/00_launcher.c \
 			ft_strcmp/06_different_len_test_two.c \
 			ft_strcmp/07_null_test_two.c \
 			ft_strcmp/08_null_test_three.c \
+			ft_strrev/00_launcher.c \
+			ft_strrev/01_basic_test.c \
+			ft_strrev/02_null_test.c \
+			ft_strrev/03_empty_string.c \
 			main.c
 
 OBJ =		$(SRC:.c=.o)

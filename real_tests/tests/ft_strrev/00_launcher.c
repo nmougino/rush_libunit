@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 18:50:28 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 20:30:35 by nmougino         ###   ########.fr       */
+/*   Created: 2017/02/11 16:39:18 by nmougino          #+#    #+#             */
+/*   Updated: 2017/02/12 20:26:50 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "unit_tests.h"
 
-int	main(void)
+int	ft_strrev_launcher(void)
 {
-	int	tab[2];
+	t_unit_test *list;
 
-	ft_bzero(tab, 2 * sizeof(int));
-	tab[ft_strlen_launcher() + 1]++;
-	tab[ft_strcmp_launcher() + 1]++;
-	tab[ft_strrev_launcher() + 1]++;
-	ft_printf("%d functionnal - %d crashing - %d total\n", tab[1], tab[0],
-	tab[0] + tab[1]);
-	return (tab[0] ? -1 : 0);
+	list = NULL;
+	ft_printf("\033[1mFT_STRREV\033[0m\n");
+	load_test(&list, "Basic test", &ft_strrev_basic_test);
+	load_test(&list, "NULL test", &ft_strrev_null_test);
+	load_test(&list, "Empty string", &ft_strrev_empty_string);
+	return (launch_test(list));
 }
