@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 13:12:29 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 19:42:32 by ahamouda         ###   ########.fr       */
+/*   Updated: 2017/02/12 23:04:18 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,15 @@ static void	display_total(int *ret)
 
 int			launch_test(t_unit_test *list)
 {
-	int		ret[5];
-	pid_t	pid;
-	int		stat;
+	int			ret[5];
+	pid_t		pid;
+	int			stat;
+	t_unit_test *tmp;
 
 	bzero(ret, 5 * sizeof(int));
 	while (list)
 	{
+		tmp = list;
 		if ((pid = fork()) == -1)
 			exit(1);
 		if (!pid)
@@ -47,6 +49,7 @@ int			launch_test(t_unit_test *list)
 			ret[display_return(stat, list->test_name)]++;
 		}
 		list = list->next;
+		free(tmp);
 	}
 	display_total(ret);
 	return (ret[0] + ret[1] + ret[2] + ret[3] + ret[4] == ret[0] ? 0 : -1);
