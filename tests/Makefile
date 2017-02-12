@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/07 23:21:20 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/11 19:03:07 by nmougino         ###   ########.fr        #
+#    Updated: 2017/02/12 20:32:55 by nmougino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,3 +104,5 @@ clean:
 fclean: clean
 	@echo "$(RED)@ Binary deletion$(DEF)"
 	@rm -f $(NAME)
+	@make fclean -C ../framework
+	@make fclean -C ../libft

@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 16:40:13 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 20:29:49 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:43:48 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libunit.h"
 # include "libft.h"
+# include "limits.h"
 
 /*
 ** FT_STRLEN
@@ -50,5 +51,17 @@ int	ft_strrev_launcher(void);
 int	ft_strrev_basic_test(void);
 int	ft_strrev_null_test(void);
 int	ft_strrev_empty_string(void);
+
+/*
+** FT_ITOA
+*/
+
+int	ft_itoa_launcher(void);
+
+int	ft_itoa_basic_test(void);
+int	ft_itoa_negative_test(void);
+int	ft_itoa_zero_test(void);
+int	ft_itoa_min_test(void);
+int	ft_itoa_max_test(void);
 
 #endif
