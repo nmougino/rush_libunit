@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:36:57 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 20:46:28 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 23:18:36 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 int	ft_itoa_negative_test(void)
 {
-	if (strcmp(ft_itoa(-12345), "-12345"))
-		return (-1);
-	else
-		return (0);
+	const char	*str = ft_itoa(-12345);
+	int			i;
+
+	i = 0;
+	if (strcmp(str, "-12345"))
+		i = -1;
+	free(str);
+	return (i);
 }

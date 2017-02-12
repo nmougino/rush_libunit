@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:42:13 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 20:49:08 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 23:21:04 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 int	ft_itoa_max_test(void)
 {
-	if (strcmp(ft_itoa(2147483647), "2147483647"))
-		return (-1);
-	else
-		return (0);
+	const char	*str = ft_itoa(2147483647);
+	int			i;
+
+	i = 0;
+	if (strcmp(str, "2147483647"))
+		i = -1;
+	return (i);
 }
