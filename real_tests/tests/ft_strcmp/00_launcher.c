@@ -12,7 +12,7 @@
 
 #include "unit_tests.h"
 
-int ft_strcmp_launcher(void)
+int	ft_strcmp_launcher(void)
 {
 	t_unit_test *list;
 
@@ -26,5 +26,5 @@ int ft_strcmp_launcher(void)
 	load_test(&list, "longer string 2", &ft_strcmp_len_test_two);
 	load_test(&list, "NULL test 2", &ft_strcmp_null_test_two);
 	load_test(&list, "NULL test 3", &ft_strcmp_null_test_three);
-	return(launch_test(list));
+	return (launch_test(list));
 }

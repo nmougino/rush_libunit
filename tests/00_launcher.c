@@ -12,7 +12,7 @@
 
 #include "unit_tests.h"
 
-int launcher(void)
+int	launcher(void)
 {
 	t_unit_test *list;
 
@@ -21,5 +21,5 @@ int launcher(void)
 	load_test(&list, "fail_test", &fail_test);
 	load_test(&list, "seg_fault_test", &segv_test);
 	load_test(&list, "bus_error_test", &buse_test);
-	return(launch_test(list));
+	return (launch_test(list));
 }

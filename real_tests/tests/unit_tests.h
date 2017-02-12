@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UNIT_TEST_H
-# define UNIT_TEST_H
+#ifndef UNIT_TESTS_H
+# define UNIT_TESTS_H
 
 # include "libunit.h"
 # include "libft.h"

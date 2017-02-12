@@ -12,7 +12,7 @@
 
 #include "unit_tests.h"
 
-int ft_strlen_launcher(void)
+int	ft_strlen_launcher(void)
 {
 	t_unit_test *list;
 
@@ -21,5 +21,5 @@ int ft_strlen_launcher(void)
 	load_test(&list, "Basic test", &ft_strlen_basic_test);
 	load_test(&list, "NULL test", &ft_strlen_null_test);
 	load_test(&list, "Empty string", &ft_strlen_empty_string);
-	return(launch_test(list));
+	return (launch_test(list));
 }

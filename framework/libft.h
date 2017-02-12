@@ -20,14 +20,6 @@
 # include <fcntl.h>
 # include "ft_printf.h"
 
-
-/*
-** portabilite
-*/
-
-typedef long int intmax_t;
-typedef unsigned long int uintmax_t;
-
 typedef	struct		s_list
 {
 	void			*content;
@@ -37,7 +29,8 @@ typedef	struct		s_list
 
 void				ft_lstadd_top(t_list **alst, t_list *new);
 void				ft_lstadd_end(t_list **alst, t_list *new);
-void				ft_lstadd_sort(t_list **alst, t_list *new, int (*sfun)(void *, void *));
+void				ft_lstadd_sort(t_list **alst, t_list *new,
+									int (*sfun)(void *, void *));
 
 int					ft_abs(int nb);
 intmax_t			ft_absmax(intmax_t nb);

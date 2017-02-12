@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/31 18:06:49 by nmougino          #+#    #+#             */
-/*   Updated: 2016/11/06 16:36:23 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 20:04:50 by ahamouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,6 @@
 # include "libft.h"
 
 # define BUF_SIZE	500
-
-/*
-** portabilite
-*/
-
-typedef long int intmax_t;
-typedef unsigned long int uintmax_t;
 
 enum				e_hljz
 {
@@ -80,7 +73,7 @@ typedef struct		s_print
 	t_spec			*spec;
 }					t_print;
 
-typedef	int			(*convf_t)(t_spec*, t_print*);
+typedef	int			(*t_convf)(t_spec*, t_print*);
 
 int					ft_printf(const char *format, ...);
 int					ft_dprintf(int fd, const char *format, ...);
