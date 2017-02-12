@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:39:00 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 23:20:06 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 23:25:49 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_itoa_zero_test(void)
 {
-	const char	*str = ft_itoa(0);
+	char		*str;
 	int			i;
 
+	str = ft_itoa(0);
 	i = 0;
 	if (strcmp(str, "0"))
 		i = -1;

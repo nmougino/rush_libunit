@@ -6,7 +6,7 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:39:39 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/12 23:20:36 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 23:25:49 by nmougino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_itoa_min_test(void)
 {
-	const char	*str = ft_itoa(-2147483648);
+	char		*str;
 	int			i;
 
+	str = ft_itoa(-2147483648);
 	i = 0;
 	if (strcmp(str, "-2147483648"))
 		i = -1;
