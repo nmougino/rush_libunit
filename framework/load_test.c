@@ -6,23 +6,23 @@
 /*   By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 12:58:28 by nmougino          #+#    #+#             */
-/*   Updated: 2017/02/11 13:32:36 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 19:40:17 by ahamouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-void	load_test(t_unit_test **list, char *name, f_p func)
+void	load_test(t_unit_test **list, char *name, int (*fct)(void))
 {
 	t_unit_test	*new;
 	t_unit_test	*tmp;
 
-	if (list && name && func)
+	if (list && name && fct)
 	{
 		if (!(new = malloc(sizeof(t_unit_test))))
 			exit(42);
 		new->test_name = name;
-		new->test_func = func;
+		new->f = fct;
 		new->next = NULL;
 		if (!*list)
 			*list = new;

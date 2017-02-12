@@ -6,7 +6,7 @@
 /*   By: ahamouda <ahamouda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 12:31:30 by ahamouda          #+#    #+#             */
-/*   Updated: 2017/02/11 17:49:44 by nmougino         ###   ########.fr       */
+/*   Updated: 2017/02/12 19:52:03 by ahamouda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,15 @@
 # define EC_CYA		"\033[36m"
 # define EC_WHI		"\033[37m"
 
-// # define UNIT_OK	"\033[1m\033[32mOK\033[0m"
-// # define UNIT_KO	"\033[1m\033[31mKO\033[0m"
-// # define UNIT_SEGV	"\033[1m\033[33mSEGV\033[0m"
-// # define UNIT_BUSE	"\033[1m\033[33mBUSE\033[0m"
-
 # define UNIT_OK	"\033[32mOK\033[0m"
 # define UNIT_KO	"\033[31mKO\033[0m"
 # define UNIT_SEGV	"\033[33mSEGV\033[0m"
 # define UNIT_BUSE	"\033[33mBUSE\033[0m"
 
-typedef int				(*f_p)(void);
-
 typedef struct			s_unit_test
 {
 	char				*test_name;
-	f_p					test_func;
+	int					(*f)(void);
 	struct s_unit_test	*next;
 }						t_unit_test;
 
@@ -55,7 +48,8 @@ typedef struct			s_unit_test
 ** Ajoute un test a la fin de la liste.
 */
 
-void					load_test(t_unit_test **list, char *name, f_p func);
+void					load_test(t_unit_test **list, char *name,
+						int (*f)(void));
 
 /*
 ** execute tous les tests les un a la suite des autres dans l'interface du
