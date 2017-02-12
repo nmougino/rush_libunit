@@ -6,7 +6,7 @@
 #    By: nmougino <nmougino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/07 23:21:20 by nmougino          #+#    #+#              #
-#    Updated: 2017/02/11 20:43:10 by nmougino         ###   ########.fr        #
+#    Updated: 2017/02/12 18:53:45 by ahamouda         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,12 +25,22 @@ SRCDIR =	.
 INCDIR =	../includes
 OBJDIR =	objs
 DETDIR =	ft_strlen
+DETDIR +=	ft_strcmp
 
 #	Liste des sources
 SRC =		ft_strlen/00_launcher.c \
 			ft_strlen/01_basic_test.c \
 			ft_strlen/02_null_test.c \
 			ft_strlen/03_empty_string.c \
+			ft_strcmp/00_launcher.c \
+			ft_strcmp/01_equal_test.c \
+			ft_strcmp/02_null_test.c \
+			ft_strcmp/03_different_test.c \
+			ft_strcmp/04_different_test_two.c \
+			ft_strcmp/05_different_len_test.c \
+			ft_strcmp/06_different_len_test_two.c \
+			ft_strcmp/07_null_test_two.c \
+			ft_strcmp/08_null_test_three.c \
 			main.c
 
 OBJ =		$(SRC:.c=.o)
@@ -101,7 +111,11 @@ clean:
 	@rm -rf $(OBJDIR)
 	@echo "$(RED)@ Binary deletion$(DEF)"
 	@rm -f $(NAME)
+	make clean -C ../../framework
+	make clean -C ..
 
 fclean: clean
 	@echo "$(RED)@ Binary deletion$(DEF)"
 	@rm -f $(NAME)
+	make fclean -C ../../framework
+	make fclean -C ..
